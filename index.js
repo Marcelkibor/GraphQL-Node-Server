@@ -1,17 +1,16 @@
-// index.js
 const express = require("express");
 const { ApolloServer, gql } = require("apollo-server-express");
 
 const app = express();
 
-// Define your GraphQL schema
+// Define GraphQL schema
 const typeDefs = gql`
   type Query {
     hello: String
   }
 `;
 
-// Resolver function for the "hello" query
+// Resolver function
 const resolvers = {
   Query: {
     hello: () => "Hello, GraphQL!",
